@@ -1,0 +1,30 @@
+{
+  "project": "Knowledge RAG Agent",
+  "knowledge_notes": 5,
+  "searchable_pieces": 10,
+  "retrieval_evaluation": {
+    "questions_tested": 10,
+    "v1_keyword_hit_at_3_percent": 90.0,
+    "v2_semantic_hit_at_3_percent": 100.0,
+    "note": "Results are from our initial 10-question test set; they do not guarantee performance on unseen questions."
+  },
+  "unsupported_question_test": {
+    "question": "What is the capital of France?",
+    "observed_answer": "I don't know based on the available notes.",
+    "observed_sources": 0,
+    "top_similarity": 0.105,
+    "threshold": 0.35,
+    "result": "PASS"
+  },
+  "trust_check": {
+    "draft_detection": "PASS",
+    "unchecked_detection": "PASS",
+    "outdated_detection": "Implemented; not yet tested with an expired note"
+  },
+  "limitations": [
+    "Small evaluation set",
+    "Semantic similarity is not proof of factual support",
+    "Answer faithfulness requires more testing",
+    "The embedding threshold needs broader validation"
+  ]
+}
